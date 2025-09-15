@@ -23,7 +23,15 @@ namespace BMI_calc
         static void Main(string[] args)
         {
 
+            Console.WriteLine("BMI Kalkylator");
+            Console.WriteLine("Ange din vikt i kg:");
+            double weight = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ange din längd:");
+            double height = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ange enhet (metric/imperial), standard är metric:");
+            string unit = Console.ReadLine();
 
+            Console.WriteLine($"Din BMI är {CalculateBMI(weight, height, unit)}");
 
         }
 
