@@ -33,6 +33,18 @@ namespace BMI_calc
 
             Console.WriteLine($"Din BMI är {CalculateBMI(weight, height, unit)}");
 
+            // Vanligt anrop (metric, default)
+            double bmi1 = CalculateBMI(weight, height);
+            Console.WriteLine($"BMI (metric, default): {bmi1:F2}");
+
+            // Namngivna argument i annan ordning
+            double bmi2 = CalculateBMI(weight, height);
+            Console.WriteLine($"BMI (metric, named args): {bmi2:F2}");
+
+            // Namngivna argument + explicit enhet
+            double bmi3 = CalculateBMI(unit: "imperial", weight: weight, height: height);
+            Console.WriteLine($"BMI (imperial): {bmi3:F2}");
+
         }
 
 
