@@ -30,7 +30,7 @@ namespace BMI_calc
             while (true)
             {
                 Console.WriteLine("Ange din vikt i kg:");
-                if (double.TryParse(Console.ReadLine(), out weight))
+                if (double.TryParse(Console.ReadLine(), out weight) && weight > 0)
                     break;
                 Console.WriteLine("Ogiltig inmatning.");
             }
@@ -39,7 +39,7 @@ namespace BMI_calc
             while (true)
             {
                 Console.WriteLine("Ange din längd i meter:");
-                if (double.TryParse(Console.ReadLine(), out height))
+                if (double.TryParse(Console.ReadLine(), out height) && height > 0)
                     break;
                 Console.WriteLine("Ogiltig inmatning.");
             }
